@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>はがき</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: 100mm 148mm;
+      margin: 0;
+    }
+
+    @media screen {
+      body {
+        background: #eee;
+      }
+
+      .page {
+        background: white;
+        box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+        margin: 5mm;
+        float: left;
+      }
+    }
+
+    .page {
+      width: 100mm;
+      height: 147mm;
+      page-break-after: always;
+      position: relative;
+    }
+
+    #postal_code_first {
+      position: absolute;
+      top: 14mm;
+      left: 45mm;
+      margin: 0;
+      padding: 0;
+      font-size: 12pt;
+      letter-spacing: 4.3mm;
+    }
+
+    #postal_code_second {
+      position: absolute;
+      top: 14mm;
+      left: 67mm;
+      margin: 0;
+      padding: 0;
+      font-size: 12pt;
+      letter-spacing: 4.3mm;
+    }
+
+    #address1 {
+      top: 30mm;
+      right: 8mm;
+      font-size: 12pt;
+      letter-spacing: 1.2mm;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+    }
+
+    #address2 {
+      bottom: 25mm;
+      right: 17mm;
+      font-size: 12pt;
+      letter-spacing: 1.2mm;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+    }
+
+    #name {
+      position: absolute;
+      top: 35mm;
+      right: 40mm;
+      font-size: 24pt;
+      line-height: 1.2em;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    #name>div {
+      position: relative;
+    }
+
+    #name1 {
+      letter-spacing: 0.7em;
+    }
+
+    #name2 {
+      top: 5mm;
+      letter-spacing: 0.7em;
+    }
+
+    #suffix {
+      top: 8mm;
+      min-height: 24mm;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="page">
+    <div id="postal_code_first">602</div>
+    <div id="postal_code_second">8570</div>
+    <div id="address1">京都市上京区下立売通新町西入薮ノ内町</div>
+    <div id="address2">マンション名１２３４号室</div>
+    <div id="name">
+      <div id="name1">山田</div>
+      <div id="name2">太郎</div>
+      <div id="suffix">様</div>
+    </div>
+  </section>
+</body>
+
+</html>
